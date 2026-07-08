@@ -29,7 +29,7 @@ def extract_text_from_pdf(uploaded_file):
 def isolate_claims(text, api_key):
     """Uses Gemini to identify specific numerical, statistical, or financial claims."""
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
     
     prompt = f"""
     You are an expert fact-checking compiler. Analyze the text below and extract exactly 3 to 5 critical statements that contain hard statistics, specific dates, technical milestones, or financial claims that can be objectively cross-referenced on the live internet.
